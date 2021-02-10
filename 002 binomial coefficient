@@ -1,0 +1,12 @@
+//binomial coefficient
+
+module firstmod
+import StdEnv
+
+fact 0 = 1
+fact n = n * fact (n-1)
+
+over n k = fact n / (fact k * fact (n-k))
+
+//10 over 3
+Start = over 10 3
