@@ -1,0 +1,9 @@
+module firstmod
+import StdEnv
+
+fact n = prod [1..n]
+
+//19! = 3628800
+Start = fact 10
+
+/*haskell fact n = product [1..n]*/
