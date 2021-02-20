@@ -1,0 +1,14 @@
+is_prime :: Int -> Bool
+is_prime 2 = True
+is_prime n
+| n < 2 = False
+| (length ([x \\ x <- [2 .. n-1] | n rem x == 0])) > 0 = False
+//only 1 and n can divide n, so if there is at least one divisible int, then n != prime
+= True
+
+//Start = is_prime 5 // True
+//Start = is_prime 0 // False
+//Start = is_prime 1 // False
+//Start = is_prime 2 // True
+//Start = is_prime 2017 // True
+//Start = is_prime 54 //False
