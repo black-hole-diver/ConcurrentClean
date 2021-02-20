@@ -1,0 +1,17 @@
+//is_palindrome :: Int -> Bool
+is_palindrome n
+|n<0 = False //Negative numbers are not palindromic, aside from their absolute values
+= (int2list n == reverse (int2list n))
+	where
+		int2list :: Int -> [Int]
+		int2list 0 = []
+		int2list n = [n rem 10] ++ int2list (n/10)
+
+//Start = is_palindrome 0 // True
+//Start = is_palindrome 55 // True
+//Start = is_palindrome 49594 // True
+//Start = is_palindrome 1337 // False
+//Start = is_palindrome 1000343487 //False
+//Start = is_palindrome -1 //False
+//Start = is_palindrome 345543 // True
+//Start = is_palindrome 33343334333
