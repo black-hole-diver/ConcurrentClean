@@ -1,0 +1,12 @@
+module sen
+import StdEnv
+
+same :: [Int][Int] -> Bool
+same [][] = True
+same x y = rem_2 x == rem_2 y
+	where
+		rem_2 :: [Int] -> [Int]
+		rem_2 [] = []
+		rem_2 [x:xs] = [x rem 2 : rem_2 xs]
+		
+Start = same [1,3,4][1,3]
