@@ -1,0 +1,16 @@
+module self
+import StdEnv
+
+//2.Prime_count
+Prime_count :: [Int] -> Int
+Prime_count [] = 0
+Prime_count [x:xs] = is_prime x + Prime_count xs
+	where
+		is_prime :: Int -> Int
+		is_prime n
+		| n < 2 = 0
+		| n == 2 = 1
+		| (length [x \\ x <- [2..n-1] | n rem x == 0]) > 0 = 0
+		= 1
+		
+Start = Prime_count [2,3,4,5,2017,8]
