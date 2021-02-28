@@ -1,0 +1,14 @@
+module oe
+import StdEnv
+
+odd :: [Int] -> [Int]
+odd [] = []
+odd [x] = [x]
+odd [o:e:xs] = [o : odd xs]
+//Start = odd [2,3,4]
+
+even :: [Int] -> [Int]
+even [] = []
+even [x] = []
+even [o:e:xs] = [e : even xs]
+//Start = even [2,3,4,5]
